@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Alpha_binInfo</string>
+    <string name="empty_history">История пуста</string>
+    <string name="history">История</string>
+    <string name="enter_bin">Введите BIN</string>
+    <string name="search">Поиск</string>
+    <string name="card_type">Тип карты:</string>
+    <string name="country">Страна:</string>
+    <string name="coordinates">Координаты:</string>
+    <string name="bank">Банк:</string>
+    <string name="main">Главная</string>
+</resources>

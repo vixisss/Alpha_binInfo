@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"/>
+
+    <EditText
+        android:id="@+id/editTextBin"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/buttonSearch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="LabelFor,RtlSymmetry"
+
+        android:maxLength="8"
+
+        android:hint="@string/enter_bin"
+        android:paddingStart="16dp"
+
+        android:background="#DCDCDC"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginTop="70dp"/>
+
+    <ImageView
+        android:id="@+id/clear"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+
+        android:background="#DCDCDC"
+
+        android:paddingEnd="8dp"
+
+        android:visibility="gone"
+
+        android:src="@drawable/clear_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextBin"
+        app:layout_constraintEnd_toEndOf="@+id/editTextBin"
+        app:layout_constraintTop_toTopOf="@+id/editTextBin" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/button_shape"
+        android:text="@string/search"
+        app:backgroundTint="@color/red_alpha"
+
+        app:layout_constraintBottom_toBottomOf="@+id/editTextBin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextBin" />
+
+    <TextView
+        android:id="@+id/cardType_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="32dp"
+
+        android:fontFamily="sans-serif-black"
+        android:text="@string/card_type"
+
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/editTextBin"
+        app:layout_constraintTop_toBottomOf="@+id/editTextBin" />
+
+    <TextView
+        android:id="@+id/cardType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="8dp"
+
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/cardType_title"
+        app:layout_constraintTop_toBottomOf="@+id/cardType_title" />
+
+    <TextView
+        android:id="@+id/country_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="32dp"
+        android:fontFamily="sans-serif-black"
+
+        android:text="@string/country"
+
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/cardType_title"
+        app:layout_constraintTop_toBottomOf="@+id/cardType" />
+
+    <TextView
+        android:id="@+id/country"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="8dp"
+
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/country_title"
+        app:layout_constraintTop_toBottomOf="@+id/country_title" />
+
+    <TextView
+        android:id="@+id/coordinates"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="8dp"
+
+        android:text="@string/coordinates"
+
+        android:textSize="16sp"
+
+        app:layout_constraintEnd_toStartOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/country_title"
+        app:layout_constraintTop_toBottomOf="@+id/country" />
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/bank_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp"
+
+        android:fontFamily="sans-serif-black"
+
+        android:text="@string/bank"
+
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/editTextBin" />
+
+    <TextView
+        android:id="@+id/bank_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="8dp"
+
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/buttonSearch"
+        app:layout_constraintStart_toStartOf="@+id/bank_title"
+        app:layout_constraintTop_toBottomOf="@+id/bank_title" />
+
+    <TextView
+        android:id="@+id/bank_url"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="8dp"
+
+
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/buttonSearch"
+        app:layout_constraintStart_toStartOf="@+id/bank_title"
+        app:layout_constraintTop_toBottomOf="@+id/bank_name" />
+
+    <TextView
+        android:id="@+id/bank_phone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="8dp"
+
+        android:textSize="16sp"
+
+        app:layout_constraintEnd_toEndOf="@+id/buttonSearch"
+        app:layout_constraintStart_toStartOf="@+id/bank_title"
+        app:layout_constraintTop_toBottomOf="@+id/bank_url" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
